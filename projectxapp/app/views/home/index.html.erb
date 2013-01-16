@@ -1,0 +1,12 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+
+We think that you are located in: <%= @location[0].city %>, <%= @location[0].state %>
+
+<%= form_tag("/search/index", :method => "get") do %>
+  <%= label_tag(:location, "Enter your city and state:") %>
+  <%= text_field_tag(:location) %>
+  <%= label_tag(:artist, "Enter your favorite artist:") %>
+  <%= text_field_tag(:artist) %>
+  <%= submit_tag("Find me some concerts") %>
+<% end %>
